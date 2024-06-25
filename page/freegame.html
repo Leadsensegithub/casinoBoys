@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Image/CBfavicon-01-01.svg" type="image/x-icon" style="width: 30px;">
+    <link rel="shortcut icon" href="../Image/CBfavicon-01-01.svg" type="image/x-icon" style="width: 30px;">
+    <title>Casinoboys - Under Development</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            cursor: url('../image/CBfavicon-01-01.svg'), auto;
+            overflow-x: hidden;
+        }
+
+        .active {
+            background-color: #C10000;
+            border: 5px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .z {
+            z-index: -1;
+        }
+
+        .header {
+            top: 0;
+            background-color: white;
+            box-shadow: 0px 5px 20px 0px #00000052;
+            ;
+            position: fixed;
+            width: 100%;
+            color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border-bottom: 2px solid #fff; */
+            z-index: 5;
+
+        }
+
+        .header-navigation {
+            display: flex;
+            /* justify-content: center; */
+        }
+
+        .header-navigation a {
+            color: #000022;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        .header-navigation a:hover {
+            background-color: #C10000;
+            border: 5px;
+            color: white;
+            border-radius: 10px;
+        }
+
+
+
+        footer {
+            background-color: white;
+            padding: 20px 0;
+            color: black;
+            font-size: 14px;
+            box-shadow: 1px 1px 7px 1px #00000082;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 0 0 30%;
+            /* Adjust the width as needed */
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-section ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer-contact {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-contact p {
+            margin: 5px 0;
+        }
+
+        .faq-answer {
+            display: none;
+        }
+
+        .span {
+            height: 60px;
+            left: -5px;
+            position: absolute;
+            top: -20px;
+            width: 60px;
+            z-index: 2;
+            border-radius: 5px;
+            background: linear-gradient(to top left, transparent 50%, #C10000 50%);
+        }
+
+
+        .span i {
+            color: white;
+            font-size: 60px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            font-size: 20px;
+        }
+
+        .how-content:hover {
+            margin-top: -5px;
+            cursor: pointer;
+        }
+
+        .games {
+            margin-top: 85px;
+            padding: 2% 5%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <img src="../image/Casinoboys-01.svg" alt="Casinoboys Logo" width="150">
+            </div>
+            <div class="header-navigation">
+                <a href="../index.html">Home</a>
+                <a href="./review.html">Review</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./new.html">News</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contectus.html">Contact Us</a>
+            </div>
+
+
+        </div>
+    </div>
+    <div>
+        <div class="games">
+            <iframe src="../games/game1/index.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>About Us</h3>
+                        <p>Welcome to Bet Review, your ultimate destination for comprehensive and unbiased reviews of
+                            the
+                            leading betting platforms in the industry. At Bet Review, we understand the importance of
+                            making
+                            informed decisions when it comes to placing your bets. That's why we're dedicated to
+                            providing
+                            you with detailed insights, expert analysis, and up-to-date information to enhance your
+                            online
+                            betting experience.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Latest News</h3>
+                        <ul>
+                            <li><a href="#">New Feature Released</a></li>
+                            <li><a href="#">Company Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61558687962080">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/betreview.online/">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <p>&copy; 2024 BetReview. All rights reserved.</p>
+                    <p>Contact us: support@betreview.online</p>
+                </div>
+            </div>
+        </footer>
+</body>
+
+
+</html>

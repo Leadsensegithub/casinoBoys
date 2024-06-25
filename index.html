@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Image/CBfavicon-01-01.svg" type="image/x-icon" style="width: 30px;">
+    <link rel="shortcut icon" href="./Image/CBfavicon-01-01.svg" type="image/x-icon" style="width: 30px;">
+    <title>Casinoboys - Under Development</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            cursor: url('./image/CBfavicon-01-01.svg'), auto;
+        }
+
+        .z {
+            z-index: -1;
+        }
+
+        .header {
+            top: 0;
+            background-color: white;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .161);
+            position: fixed;
+            width: 100%;
+            color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border-bottom: 2px solid #fff; */
+            z-index: 5;
+
+        }
+
+        .header-navigation {
+            display: flex;
+            /* justify-content: center; */
+        }
+
+        .header-navigation a {
+            color: #000022;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        .header-navigation a:hover {
+            background-color: #C10000;
+            border: 5px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .container {
+            margin-top: 90px;
+        }
+
+        .befour-card {
+            margin-top: 30px;
+            margin-top: 30px;
+            border: 0.6px solid #0000004a;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .befour-card:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .161);
+            border-radius: 10px;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .befour-card .content {
+            text-align: center;
+
+        }
+
+        .rating {
+            color: gold;
+            margin-top: 30px;
+            font-size: 30px;
+        }
+
+        .amount {
+            margin-top: 15px;
+        }
+
+        .amount p {
+            color: greenyellow;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .amount h5 {
+            font-weight: 700;
+        }
+
+        .buttons .pay {
+            margin-top: 10px;
+            padding: 10px 50px;
+            color: white;
+            border: none;
+            background-color: #C10000;
+            border: 3px solid #c10000;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .161);
+            border-radius: 30px;
+            font-weight: 700;
+
+        }
+
+        .buttons .view {
+            margin-top: 10px;
+            color: black;
+            padding: 10px 38px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .161);
+            background-color: white;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+
+        .trusted {
+            background-color: #E9ECEE;
+            padding: 2% 5%;
+            margin-top: 30px;
+            z-index: -1;
+            color: black;
+        }
+
+        .payout {
+            background-color: #1F5776;
+            padding: 2% 5%;
+            /* margin-top: 30px; */
+            z-index: -1;
+            color: rgb(255, 255, 255);
+        }
+
+        .howwe {
+            padding: 2% 5%;
+            z-index: -1;
+            background-color: white;
+
+        }
+
+        .payout p {
+            color: white;
+            font-size: 20px;
+        }
+
+        .trusted p {
+            color: black;
+            font-size: 20px;
+        }
+
+        .how-content {
+            padding: 25px;
+            font-weight: 600;
+            height: 400px;
+            background: #FFD1B0;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .161);
+
+        }
+
+        .faq {
+            text-align: center;
+        }
+
+        footer {
+            background-color: white;
+            padding: 20px 0;
+            color: black;
+            font-size: 14px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+            border-top: 1px solid #0000006b;
+        }
+
+        .p {
+            text-indent: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 0 0 30%;
+            /* Adjust the width as needed */
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-section ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer-contact {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-contact p {
+            margin: 5px 0;
+        }
+
+        .faq-answer {
+            display: none;
+        }
+
+        .active {
+            background-color: #C10000;
+            border: 5px;
+            color: white !important;
+            border-radius: 10px;
+        }
+
+        .span {
+            height: 60px;
+            left: -5px;
+            position: absolute;
+            top: -20px;
+            width: 60px;
+            z-index: 2;
+            border-radius: 5px;
+            background: linear-gradient(to top left, transparent 50%, #C10000 50%);
+        }
+
+
+        .span i {
+            color: white;
+            font-size: 60px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            font-size: 20px;
+        }
+
+        .how-content:hover {
+            margin-top: -5px;
+            cursor: pointer;
+        }
+
+        .content-hedear {
+            top: 0;
+            z-index: 2;
+            margin-top: 8%;
+            margin-left: 13%;
+            position: absolute;
+            font-weight: 700;
+            color: white;
+            width: 40%;
+
+        }
+
+        .content-p {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            margin-top: 15%;
+            color: white;
+            width: 40%;
+            margin-left: 13%;
+
+            /* text-indent: 50px; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <img src="./image/Casinoboys-01.svg" alt="Casinoboys Logo" width="150">
+            </div>
+            <div class="header-navigation">
+
+                <a class="active" href="./index.html">Home</a>
+                <a href="./page/review.html">Review</a>
+                <a href="./page/blog.html">Blog</a>
+                <a href="./page/new.html">News</a>
+                <a href="./page/about.html">About Us</a>
+                <a href="./page/contectus.html">Contact Us</a>
+
+            </div>
+
+
+        </div>
+        <div>
+            <img src="./image/Casinoboys banner.svg" style="width: 100%;margin-top: 70px;
+            " />
+            <h1 class="content-hedear">Explore top-rated online casinos in India.</h1>
+            <p class="content-p">Delve into the realm of online gaming with our meticulously curated list of top-rated
+                casinos in India,
+                offering a thrilling array of games, lucrative bonuses, and secure payment options for an unparalleled
+                gambling experience</p>
+        </div>
+        <div class="container z" id="container">
+
+
+
+
+
+
+
+
+        </div>
+        <div class="trusted">
+            <h1>Most trusted casino</h1>
+            <p>Once you’re familiar with how the game is played, there are still some poker rules that you should know
+                about before you start to play for real money in an online casino.</p>
+            <div class="befour-card">
+                <div class="card" style="border-radius: 20px">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="content">
+                                    <span>Rank 1</span><br />
+                                    <img src="./image/fav-cursor.svg" alt="site title" style="width: 20px;" />
+                                    <h2>22Bet</h2>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div>
+                                    <div class="rating">
+                                        ★
+                                        ★
+                                        ★
+                                        ★
+                                        ★
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="amount">
+                                    <p>$20000</p>
+                                    <h5>Bonus:</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="buttons">
+                                    <div class="row">
+                                        <button class="pay">Play Now</button>
+                                    </div>
+                                    <div class="row">
+                                        <button class="view">View Details</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="payout">
+            <h1>Fastest payout</h1>
+            <p>Once you’re familiar with how the game is played, there are still some poker rules that you should know
+                about before you start to play for real money in an online casino.
+
+            </p>
+        </div>
+        <div class="howwe">
+            <h1>How we select the best online casinos in India</h1>
+            <p>In this section, we’ll explain the qualities we check before curating our list of the best online casinos
+                in India:</p>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="how-content">
+                        <img src="./image/fav-cursor.svg" style="width: 20px;" />
+                        <h3>Game collection</h3>
+                        <p>Explore an unparalleled collection of thrilling games at our premier online casino. Dive into
+                            a world of excitement with our vast selection of slots, table games, live dealer
+                            experiences, and more. Whether you're a seasoned player or new to the scene, our diverse
+                            range of games offers something for everyone. Get ready to elevate your gaming experience
+                            and win big with us
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="how-content">
+                        <img src="./image/fav-cursor.svg" style="width: 20px;" />
+                        <h3>Bonuses and promotion</h3>
+                        <p>Unlock a world of rewards with our generous bonuses and promotions. From welcome bonuses to
+                            loyalty rewards, we offer enticing incentives to enhance your gaming experience. Stay tuned
+                            for regular promotions, tournaments, and exclusive offers designed to maximize your winnings
+                            and elevate your excitement. Join us now to claim your share of the rewards
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="how-content">
+                        <img src="./image/fav-cursor.svg" style="width: 20px;" />
+                        <h3>Security and privacy</h3>
+                        <p>Your security and privacy are our top priorities. We employ the latest encryption technology
+                            to safeguard your personal and financial information. With strict adherence to privacy
+                            policies, you can trust us to provide a secure and confidential gaming environment.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="how-content">
+                        <img src="./image/fav-cursor.svg" style="width: 20px;" />
+                        <h3>Licensing and fairness</h3>
+                        <p>Rest assured, our casino operates under the strict regulations and licensing of reputable
+                            authorities. Our commitment to fairness is unwavering, with all games subjected to rigorous
+                            testing by independent auditors. Enjoy peace of mind knowing that every outcome is
+                            determined by fair and transparent processes, ensuring a level playing field for all our
+                            players.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="how-content">
+                        <img src="./image/fav-cursor.svg" style="width: 20px;" />
+                        <h3>Customer support</h3>
+                        <p>Our dedicated customer support team is available around the clock to assist you with any
+                            queries or concerns. Whether you need help navigating our platform, resolving an issue, or
+                            seeking gaming advice, our friendly and knowledgeable representatives are here to provide
+                            prompt and reliable assistance. Your satisfaction is our priority.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="how-content">
+                        <img src="./image/fav-cursor.svg" style="width: 20px;" />
+                        <h3>Payment methods</h3>
+                        <p>Experience seamless transactions with our diverse range of secure payment methods tailored to
+                            suit your needs. From credit/debit cards to e-wallets and bank transfers, we offer
+                            convenient options for depossit and withdrawals. Rest assured, all transactions are
+                            encrypted to ensure the utmost security and privacy for your financial transactions
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Casino Boys, the pinnacle of gaming expertise and insight. Founded by a team of dedicated gamers
+                        and industry professionals, we're here to revolutionize the way you experience online gambling.
+                    </p>
+                    <img src="./image/Casinoboys-01.svg" />
+                </div>
+                <div class="footer-section">
+                    <h3>Latest News</h3>
+                    <ul>
+                        <li><a href="#">New Feature Released</a></li>
+                        <li><a href="#">Company Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61558687962080">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/betreview.online/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <p>&copy; 2024 BetReview. All rights reserved.</p>
+                <p>Contact us: support@betreview.online</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    function redirectToPage(link) {
+    if (link) {
+        window.location.href = link;
+    } else {
+        console.error("Invalid link provided.");
+    }
+}
+
+    const fetchCountries = () => {
+        const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+        const apiUrl = "https://betreview.online/api/restapi/getallcountry.php?type=1";
+        const requestOptions = {
+            method: "GET",
+            redirect: "follow"
+        };
+
+        fetch(apiUrl, requestOptions)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const countries = data.data;
+                let html = '';
+
+                countries.forEach((country, index) => {
+                    let startingRating = country.rating || 0;
+                    html += `<div class="befour-card">
+                <div class="card" style="border-radius: 20px; z-index: -1;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="content">
+                                    <div class="span"><i><span>#${index + 1}</span></i></div><br />
+                                    <img src="./image/casinoly.svg" alt="site title" style="width: 77px;" />
+                                    <h2>${country?.name}</h2>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div>
+                                    <div class="rating">
+                                    ${'★'.repeat(startingRating)}${'☆'.repeat(5 - startingRating)}
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="amount">
+                                    <p>$20000</p>
+                                    <h5>Bonus:</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="buttons">
+                                    
+                                    <div class="row">
+                                        <button type='button' class="pay" onclick="redirectToPage('${country?.link}')">Play Now</button>
+
+                                    </div>
+                                    <div class="row">
+                                        <button class="view">View Details</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                `;
+                });
+
+                document.getElementById('container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    };
+    const fetchLocation = () => {
+        console.log('Fetching location data...');
+        fetch('https://ipinfo.io/json?token=4ad6192c347e8e')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Location data received:', data);
+                sessionStorage.setItem("data", JSON.stringify(data));
+            })
+            .catch(error => {
+                console.error('Error fetching geolocation data:', error);
+            });
+    };
+
+    fetchCountries();
+    fetchLocation();
+
+
+</script>
+
+<script>
+
+</script>
+
+</html>
